@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model ProductCrudNimapInfoteck.Models.Category
+@{
+    ViewBag.Title = "Edit";
+}
+<h2>Edit Category</h2>
+@using (Html.BeginForm("Edit", "Category", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <table class="table">
+        <tr>
+            <td></td>
+            <td>@Html.HiddenFor(Model=>Model.CategoryId,new{HtmlAttributes=new{@class="form-control"}})</td>
+        </tr>
+        <tr>
+            <td>Enter Category Name</td>
+            <td>@Html.EditorFor(Model=>Model.CategoryName,new{HtmlAttributes=new{@class="form-control"}})</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Update Catagory" class="btn-primary btn-success text-center" />
+
+            </td>
+        </tr>
+
+    </table>
+}

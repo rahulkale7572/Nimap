@@ -1,0 +1,28 @@
+﻿
+@model ProductCrudNimapInfoteck.Models.Category
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete Category</h1>
+@using (Html.BeginForm("Delete", "Category", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+<table class="table">
+    <tr>
+        <td>Category Id</td>
+        <td>@Model.CategoryId</td>
+    </tr>
+    <tr>
+        <td>Enter Category Name</td>
+        <td>@Model.CategoryName</td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            <input type="submit" value="Delete Category" class="btn-primary btn-success text-center" />
+
+        </td>
+    </tr>
+
+</table>
+}
